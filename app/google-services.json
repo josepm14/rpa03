@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "100340570367",
+    "project_id": "pinares-mejia-pa3-org",
+    "storage_bucket": "pinares-mejia-pa3-org.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100340570367:android:0c476f0b94ca3bb336d4ca",
+        "android_client_info": {
+          "package_name": "pinares.mejia.pa3.org"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbZ52n_vXWEX3rOTlci4uiZjE51LrVK_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
