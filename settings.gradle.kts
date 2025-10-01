@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pinares_pa3"
+rootProject.name = "josepm"
 include(":app")
+ 

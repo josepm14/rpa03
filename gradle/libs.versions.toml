@@ -1,96 +1,22 @@
 [versions]
 agp = "8.12.3"
-kotlin = "2.0.21"
-coreKtx = "1.17.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
 espressoCore = "3.7.0"
-lifecycleRuntimeKtx = "2.9.4"
-activityCompose = "1.11.0"
-composeBom = "2024.09.00"
-animatedVectorDrawable = "28.0.0"
-vectordrawableAnimated = "1.2.0"
-appcompatV7 = "28.0.0"
 appcompat = "1.7.1"
-car = "28.0.0-alpha5"
-carVersion = "1.0.0-alpha7"
-cardviewV7 = "28.0.0"
-cardview = "1.0.0"
-collections = "28.0.0"
-collection = "1.5.0"
-customtabs = "28.0.0"
-browser = "1.9.0"
-design = "28.0.0"
-exifinterface = "28.0.0"
-exifinterfaceVersion = "1.4.1"
-gridlayoutV7 = "28.0.0"
-gridlayout = "1.1.0"
-heifwriter = "28.0.0"
-heifwriterVersion = "1.0.0"
-leanbackV17 = "28.0.0"
-leanback = "1.2.0"
-mediarouterV7 = "28.0.0"
-mediarouter = "1.8.1"
-multidex = "1.0.3"
-multidexVersion = "2.0.1"
-multidexInstrumentation = "1.0.3"
-multidexInstrumentationVersion = "2.0.0"
-paletteV7 = "28.0.0"
-palette = "1.0.0"
-percent = "28.0.0"
-percentlayout = "1.0.0"
-preferenceLeanbackV17 = "28.0.0"
+material = "1.13.0"
+activity = "1.11.0"
+constraintlayout = "2.2.1"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
-androidx-ui = { group = "androidx.compose.ui", name = "ui" }
-androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
-androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
-androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
-androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-animated-vector-drawable = { group = "com.android.support", name = "animated-vector-drawable", version.ref = "animatedVectorDrawable" }
-androidx-vectordrawable-animated = { group = "androidx.vectordrawable", name = "vectordrawable-animated", version.ref = "vectordrawableAnimated" }
-appcompat-v7 = { group = "com.android.support", name = "appcompat-v7", version.ref = "appcompatV7" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-car = { group = "com.android.support", name = "car", version.ref = "car" }
-androidx-car = { group = "androidx.car", name = "car", version.ref = "carVersion" }
-cardview-v7 = { group = "com.android.support", name = "cardview-v7", version.ref = "cardviewV7" }
-androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
-collections = { group = "com.android.support", name = "collections", version.ref = "collections" }
-androidx-collection = { group = "androidx.collection", name = "collection", version.ref = "collection" }
-customtabs = { group = "com.android.support", name = "customtabs", version.ref = "customtabs" }
-androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
-design = { group = "com.android.support", name = "design", version.ref = "design" }
-exifinterface = { group = "com.android.support", name = "exifinterface", version.ref = "exifinterface" }
-androidx-exifinterface = { group = "androidx.exifinterface", name = "exifinterface", version.ref = "exifinterfaceVersion" }
-gridlayout-v7 = { group = "com.android.support", name = "gridlayout-v7", version.ref = "gridlayoutV7" }
-androidx-gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
-heifwriter = { group = "com.android.support", name = "heifwriter", version.ref = "heifwriter" }
-androidx-heifwriter = { group = "androidx.heifwriter", name = "heifwriter", version.ref = "heifwriterVersion" }
-leanback-v17 = { group = "com.android.support", name = "leanback-v17", version.ref = "leanbackV17" }
-androidx-leanback = { group = "androidx.leanback", name = "leanback", version.ref = "leanback" }
-mediarouter-v7 = { group = "com.android.support", name = "mediarouter-v7", version.ref = "mediarouterV7" }
-androidx-mediarouter = { group = "androidx.mediarouter", name = "mediarouter", version.ref = "mediarouter" }
-multidex = { group = "com.android.support", name = "multidex", version.ref = "multidex" }
-androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidexVersion" }
-multidex-instrumentation = { group = "com.android.support", name = "multidex-instrumentation", version.ref = "multidexInstrumentation" }
-androidx-multidex-instrumentation = { group = "androidx.multidex", name = "multidex-instrumentation", version.ref = "multidexInstrumentationVersion" }
-palette-v7 = { group = "com.android.support", name = "palette-v7", version.ref = "paletteV7" }
-androidx-palette = { group = "androidx.palette", name = "palette", version.ref = "palette" }
-percent = { group = "com.android.support", name = "percent", version.ref = "percent" }
-androidx-percentlayout = { group = "androidx.percentlayout", name = "percentlayout", version.ref = "percentlayout" }
-preference-leanback-v17 = { group = "com.android.support", name = "preference-leanback-v17", version.ref = "preferenceLeanbackV17" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
