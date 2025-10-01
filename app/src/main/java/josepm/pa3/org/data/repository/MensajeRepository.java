@@ -1,8 +1,9 @@
 package josepm.pa3.org.data.repository;
 
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,20 +16,20 @@ import josepm.pa3.org.data.model.Mensaje;
  */
 public class MensajeRepository {
 
-    private final CollectionReference collection;
+    private final DatabaseReference database;
 
     public MensajeRepository() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        collection = db.collection("mensajes");
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        database = db.getReference("mensajes");
     }
 
     /**
      * Guarda un mensaje en Firebase Firestore.
      */
     public void guardarMensaje(Mensaje mensaje, OnSaveListener listener) {
-        String id = collection.document().getId();
+        String id = database.push().getKey();
         mensaje.setId(id);
-        collection.document(id).set(mensaje)
+        database.child(id).setValue(mensaje)
                 .addOnSuccessListener(aVoid -> listener.onSuccess())
                 .addOnFailureListener(listener::onError);
     }
@@ -37,16 +38,22 @@ public class MensajeRepository {
      * Obtiene todos los mensajes desde Firebase.
      */
     public void obtenerMensajes(OnFetchListener listener) {
-        collection.get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<Mensaje> lista = new ArrayList<>();
-                    for (QueryDocumentSnapshot doc : queryDocumentSnapshots) {
-                        Mensaje mensaje = doc.toObject(Mensaje.class);
-                        lista.add(mensaje);
-                    }
-                    listener.onSuccess(lista);
-                })
-                .addOnFailureListener(listener::onError);
+        database.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                List<Mensaje> lista = new ArrayList<>();
+                for (DataSnapshot childSnapshot : snapshot.getChildren()) {
+                    Mensaje mensaje = childSnapshot.getValue(Mensaje.class);
+                    lista.add(mensaje);
+                }
+                listener.onSuccess(lista);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                listener.onError(error.toException());
+            }
+        });
     }
 
     // Interfaces para callbacks

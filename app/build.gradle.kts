@@ -38,7 +38,7 @@ dependencies {
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-database-ktx")
 
     // Lifecycle (MVVM)
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
